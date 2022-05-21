@@ -61,6 +61,3 @@ class _TabLearnState extends State<TabLearn> with TickerProviderStateMixin {
     });
   }
 }
-
-// Burası git testi için
-// Lanet git
