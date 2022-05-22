@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:mila/202/tab_learn.dart';
+import 'package:mila/202/service/service_learn_view.dart';
 
 void main() => runApp(const MyApp());
 
@@ -14,12 +14,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.dark().copyWith(
           appBarTheme: const AppBarTheme(
               centerTitle: true,
-              systemOverlayStyle: SystemUiOverlayStyle.dark,
+              systemOverlayStyle: SystemUiOverlayStyle.light,
               backgroundColor: Colors.transparent,
               elevation: 0,
               titleTextStyle:
                   TextStyle(fontSize: 24))), //  I used a with variable type code for make theme more editable. -.-
-      home: const TabLearn(),
+      home: const ServiceLearn(),
     );
   }
 }
