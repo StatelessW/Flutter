@@ -15,13 +15,22 @@ class _SelfServiceState extends State<SelfService> {
   final Color _redColor = Colors.red;
   final Color _greenColor = Colors.green;
 
+  bool _isLoading = false;
+
   @override
   void initState() {
     super.initState();
     fetchData(); // * Initilaize anında fetchData'nın tetiklenmesini sağlıyor.
   }
 
+  void _loadingStatus() {
+    setState(() {
+      _isLoading = !_isLoading;
+    });
+  }
+
   Future<void> fetchData() async {
+    _loadingStatus();
     final dataResponse = await Dio().get('https://jsonplaceholder.typicode.com/posts');
     // * Dio'nun pathten çektiği datayı bir değişkene atadık ve async hale gelmesini sağladık.
 
@@ -38,12 +47,15 @@ class _SelfServiceState extends State<SelfService> {
         });
       }
     }
+    _loadingStatus();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        actions: [_isLoading ? const CircularProgressIndicator.adaptive() : const SizedBox.shrink()],
+      ),
       body: ListView.builder(
           itemCount: _modelList?.length ?? 0,
           itemBuilder: (context, index) {
