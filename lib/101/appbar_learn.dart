@@ -23,4 +23,4 @@ class AppBarLearnView extends StatelessWidget {
   }
 }
 
-// TODO Appbar gibi, button styles gibi proje içerisinde birden fazla sayfada kullanılan elemanları, main.dart içindeki ThemeData'da kullanmak gerekiyor.
+// TODO Appbar styles gibi, button styles gibi proje içerisinde birden fazla sayfada kullanılan elemanları, main.dart içindeki ThemeData'da kullanmak gerekiyor.

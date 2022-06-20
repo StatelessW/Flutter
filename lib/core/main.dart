@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
-import '../202/service/self_service.dart';
+import 'package:mila/202/service/create_post.dart';
 
 void main() => runApp(const MyApp());
 
@@ -15,12 +14,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.dark().copyWith(
           appBarTheme: const AppBarTheme(
               centerTitle: true,
-              systemOverlayStyle: SystemUiOverlayStyle.light,
+              systemOverlayStyle: SystemUiOverlayStyle.dark,
               backgroundColor: Colors.transparent,
               elevation: 0,
               titleTextStyle: TextStyle(fontSize: 24))),
       //  I used a with variable type code for make theme more editable. -.-
-      home: const SelfService(),
+      home: const CreatePost(),
     );
   }
 }

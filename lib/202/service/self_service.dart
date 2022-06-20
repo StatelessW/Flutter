@@ -65,9 +65,9 @@ class _SelfServiceState extends State<SelfService> {
                 padding: const EdgeInsets.all(8.0),
                 child: ListTile(
                   title: Text(_modelList?[index].title ??
-                      ''), // * Oluşturulan, _modelList'in mezubahis indexinin mevzubahis title'ını ListTile'ın titleında yazdırdık. (Null dönebilir. Null dönerse, ?? '')
+                      ''), // * Oluşturulan, _modelList'in mevzubahis indexinin mevzubahis title'ını ListTile'ın titleında yazdırdık. (Null dönebilir. Null dönerse, ?? '')
                   subtitle: Text(_modelList?[index].body ??
-                      ''), // * Oluşturulan, _modelList'in mezubahis indexinin mevzubahis body'sini ListTile'ın subtitleında yazdırdık. (Null dönebilir. Null dönerse, ?? '')
+                      ''), // * Oluşturulan, _modelList'in mevzubahis indexinin mevzubahis body'sini ListTile'ın subtitleında yazdırdık. (Null dönebilir. Null dönerse, ?? '')
                   textColor: _colorPickerForTile(index),
                 ),
               ),
